@@ -1,8 +1,8 @@
 <template>
     <div class="results">
         <div v-show="phase == 'results'" class="results__info">
-            <p class="results__title">{{ currentSong.source }}</p>
-            <p class="results__type">{{ currentSong.title }}</p>
+            <p class="results__title">{{ currentSong?.source }}</p>
+            <p class="results__type">{{ currentSong?.title }}</p>
             <p v-show="currentSong?.song?.title" class="results__song__name">
                 {{ currentSong?.song?.title }}
             </p>
@@ -11,20 +11,27 @@
             </p>
         </div>
         <div class="results__stats">
-            <h4 class="results__song-num">{{ songNumber }} / 10</h4>
+            <h4 class="results__song-num">
+                {{ songNumber }} / {{ totalSongs }}
+            </h4>
             <h4 class="results__correctAnswers">{{ user.correctAnswers }}</h4>
         </div>
     </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters } from 'vuex';
 export default {
     computed: {
-        ...mapGetters('game', ['currentSong', 'phase', 'songNumber']),
+        ...mapGetters('game', [
+            'currentSong',
+            'phase',
+            'songNumber',
+            'totalSongs',
+        ]),
         ...mapGetters('user', ['user']),
     },
-}
+};
 </script>
 
 <style lang="scss" scoped>

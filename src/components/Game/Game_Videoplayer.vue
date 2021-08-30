@@ -28,8 +28,8 @@
         </div>
     </div>
     <div v-if="isHelperMode" class="video__buttons">
-        <TheButton class="video__button" @click="PlayVideo">Play</TheButton>
-        <TheButton class="video__button" @click="PauseVideo">Pause</TheButton>
+        <!-- <TheButton class="video__button" @click="PlayVideo">Play</TheButton> -->
+        <!-- <TheButton class="video__button" @click="PauseVideo">Pause</TheButton>
         <TheButton class="video__button" @click="RestartVideo"
             >Restart</TheButton
         >
@@ -38,14 +38,14 @@
         >
         <TheButton class="video__button" @click="ShowVideo"
             >Show Video</TheButton
-        >
+        > -->
         <TheButton class="video__button" @click="SkipPhase">Skip</TheButton>
     </div>
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
-import helpers from '@/mixins/helpers.js'
+import { mapGetters, mapActions } from 'vuex';
+import helpers from '@/mixins/helpers.js';
 
 export default {
     mixins: [helpers],
@@ -56,20 +56,20 @@ export default {
             isSongOver: false,
             isHelperMode: true,
             startTime: 0,
-        }
+        };
     },
     watch: {
         phase(phase) {
             switch (phase) {
                 case 'done':
-                    this.NextVideo()
-                    break
+                    this.NextVideo();
+                    break;
                 case 'results':
-                    this.ShowResults()
-                    break
+                    this.ShowResults();
+                    break;
                 case 'guessing':
-                    this.HideVideo()
-                    break
+                    this.HideVideo();
+                    break;
             }
         },
     },
@@ -91,52 +91,52 @@ export default {
             'MaxOutCurrentSongTime',
         ]),
         NewVideo() {
-            this.SetIntervalForVideo()
-            this.SetVolume()
-            this.PlayVideo()
-            this.StartTimer()
-            console.log('Song: ', this.currentSong)
+            this.SetIntervalForVideo();
+            this.SetVolume();
+            this.PlayVideo();
+            this.StartTimer();
+            console.log('Song: ', this.currentSong);
         },
         SetIntervalForVideo() {
             this.startTime = Math.abs(
                 this.RandomInt(
                     0,
-                    Math.floor(this.$refs.video.duration) - this.songTime,
-                ),
-            )
-            this.$refs.video.currentTime = this.startTime
+                    Math.floor(this.$refs.video.duration) - this.songTime
+                )
+            );
+            this.$refs.video.currentTime = this.startTime;
         },
         SetVolume() {
-            this.$refs.video.volume = this.$refs.video_volume.value / 100
+            this.$refs.video.volume = this.$refs.video_volume.value / 100;
         },
         ShowVideo() {
-            this.isVisible = true
+            this.isVisible = true;
         },
         HideVideo() {
-            this.isVisible = false
+            this.isVisible = false;
         },
         PlayVideo() {
-            this.$refs.video.play()
+            this.$refs.video.play();
         },
         PauseVideo() {
-            this.$refs.video.pause()
+            this.$refs.video.pause();
         },
         RestartVideo() {
-            this.$refs.video.currentTime = 0
+            this.$refs.video.currentTime = 0;
         },
         NextVideo() {
-            this.FetchNewSong()
-            this.PauseVideo()
-            this.RefreshComponent()
+            this.FetchNewSong();
+            this.PauseVideo();
+            this.RefreshComponent();
         },
 
         ShowResults() {
-            this.ShowVideo()
-            this.StartTimer()
-            this.$refs.video.currentTime = this.startTime
+            this.ShowVideo();
+            this.StartTimer();
+            this.$refs.video.currentTime = this.startTime;
         },
     },
-}
+};
 </script>
 
 <style lang="scss" scoped>

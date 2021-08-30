@@ -2,8 +2,8 @@ export default {
     namespaced: true,
     state: {
         playList: [],
-        playListSize: 10,
-        currentSong: 0,
+        playListSize: 3,
+        currentSong: 1,
         songTime: 25,
         currentSongTime: 0,
         phase: 1,
@@ -12,71 +12,75 @@ export default {
     },
     getters: {
         phase(state) {
-            if (state.phase % 3 == 0) return 'done'
-            if (state.phase % 3 == 1) return 'guessing'
-            return 'results'
+            if (state.phase % 3 == 0) return 'done';
+            if (state.phase % 3 == 1) return 'guessing';
+            return 'results';
+        },
+        totalSongs(state) {
+            return state.playListSize;
         },
         currentSong(state) {
-            return state.playList[state.currentSong]
+            return state.playList[state.currentSong];
         },
         playList(state) {
-            return state.playList
+            return state.playList;
         },
         songTime(state) {
-            return state.songTime
+            return state.songTime;
         },
         currentSongTime(state) {
-            return state.currentSongTime
+            return state.currentSongTime;
         },
         isGameOver(state) {
-            return state.isGameOver
+            return state.isGameOver;
         },
         songNumber(state) {
-            return state.currentSong + 1
+            return state.currentSong;
         },
     },
     actions: {
         async PopulateDatabase(context) {
-            const res = await fetch('./db.json')
-            const data = await res.json()
-            context.commit('PopulateDatabase', data)
+            const res = await fetch('./db.json');
+            const data = await res.json();
+            context.commit('PopulateDatabase', data);
         },
         async CreatePlaylist(context) {
-            let data = await context.dispatch('FilterEntries', 'op')
+            let data = await context.dispatch('FilterEntries', 'op');
             if (context.getters['user/hasUser']) {
                 data = await context.dispatch('user/FilterForUserList', data, {
                     root: true,
-                })
+                });
             }
             const songsChosen = () => {
                 //Done with set to prevent duplicate songs from being played
-                const songs = new Set()
-                while (songs.size - 1 <= context.state.playListSize) {
-                    songs.add(Math.floor(Math.random() * data.length))
+                const songs = new Set();
+                while (songs.size <= context.state.playListSize) {
+                    songs.add(Math.floor(Math.random() * data.length));
                 }
-                return [...songs]
-            }
+                return [...songs];
+            };
+            context.commit('EmptyPlaylist');
             for (const songIndex of songsChosen()) {
-                context.commit('AddSongToPlaylist', data[songIndex])
+                context.commit('AddSongToPlaylist', data[songIndex]);
             }
-            context.commit('StartGame')
+            context.commit('StartGame');
         },
         FilterEntries(context, type) {
             const possibleEntries = context.state.dataBase.filter((entry) => {
                 switch (type) {
                     case 'op':
                         if (entry.title.toLowerCase().includes(type))
-                            return entry
-                        break
+                            return entry;
+                        break;
                     case 'ending':
                         if (entry.title.toLowerCase().includes(type))
-                            return entry
-                        break
+                            return entry;
+                        break;
                     default:
-                        return entry
+                        return entry;
                 }
-            })
-            return possibleEntries
+            });
+            return possibleEntries;
         },
         FilterSearch(context, input) {
             const possibleEntries = context.state.dataBase
@@ -86,84 +90,90 @@ export default {
                             .toLowerCase()
                             .indexOf(input.toLowerCase()) != -1
                     )
-                        return entry.source
+                        return entry.source;
                 })
-                .map((entry) => entry.source)
-            return [...new Set(possibleEntries)]
+                .map((entry) => entry.source);
+            return [...new Set(possibleEntries)];
         },
         FetchNewSong(context) {
-            context.commit('IncrementCurrentSong')
-            context.commit('ResetPhase')
+            context.commit('IncrementCurrentSong');
+            context.commit('ResetPhase');
         },
         StartTimer(context) {
             const timer = setInterval(() => {
                 if (
                     context.getters.currentSongTime >= context.getters.songTime
                 ) {
-                    clearInterval(timer)
-                    context.commit('IncrementPhase')
-                    context.commit('ResetCurrentSongTime')
-                    return
+                    clearInterval(timer);
+                    context.commit('IncrementPhase');
+                    context.commit('ResetCurrentSongTime');
+                    return;
                 }
-                context.commit('IncrementCurrentSongTime')
-            }, 1000)
+                context.commit('IncrementCurrentSongTime');
+            }, 1000);
         },
         SkipPhase(context) {
-            context.commit('SkipPhase')
+            context.commit('SkipPhase');
         },
         CheckAnswer(context, answer = '') {
             const isCorrect =
                 answer.toLowerCase() ==
                 context.getters.currentSong.source.toLowerCase()
                     ? true
-                    : false
+                    : false;
             if (isCorrect)
-                context.commit('user/IncrementScore', isCorrect, { root: true })
-            context.commit('CheckCorrect', isCorrect)
+                context.commit('user/IncrementScore', isCorrect, {
+                    root: true,
+                });
+            context.commit('CheckCorrect', isCorrect);
         },
         SetGuessTime(context, guessTime) {
-            context.commit('SetGuessTime', guessTime)
+            context.commit('SetGuessTime', guessTime);
         },
     },
     mutations: {
         SetGuessTime(state, newTime) {
-            state.songTime = newTime
+            state.songTime = newTime;
+        },
+        EmptyPlaylist(state) {
+            state.playList = [];
         },
         AddSongToPlaylist(state, song) {
-            state.playList.push(song)
+            state.playList.push(song);
         },
         PopulateDatabase(state, data) {
-            state.dataBase = data
+            state.dataBase = data;
         },
         CheckCorrect(state, isCorrect) {
-            state.isCorrect = isCorrect
+            state.isCorrect = isCorrect;
         },
         SkipPhase(state) {
-            state.currentSongTime = state.songTime
+            state.currentSongTime = state.songTime;
         },
         EndGame(state) {
-            state.isGameOver = true
+            state.isGameOver = true;
         },
         StartGame(state) {
-            state.isGameOver = false
+            state.isGameOver = false;
         },
         ResetPhase(state) {
-            state.phase = 1
+            state.phase = 1;
         },
         ResetCurrentSongTime(state) {
-            state.currentSongTime = 0
+            state.currentSongTime = 0;
         },
         IncrementPhase(state) {
-            state.phase++
+            state.phase++;
         },
         IncrementCurrentSongTime(state) {
-            state.currentSongTime++
+            state.currentSongTime++;
         },
         IncrementCurrentSong(state) {
-            state.currentSong == state.playList.length - 1
-                ? (state.currentSong = 0)
-                : state.currentSong++
-            if (state.currentSong == 0) state.isGameOver = true
+            state.currentSong == state.playList.length
+                ? (state.currentSong = 1)
+                : state.currentSong++;
+            if (state.currentSong == state.playListSize + 1)
+                state.isGameOver = true;
         },
     },
-}
+};
