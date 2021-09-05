@@ -1,37 +1,30 @@
 <template>
     <div class="results">
-        <div v-show="phase == 'results'" class="results__info">
-            <p class="results__title">{{ currentSong?.source }}</p>
-            <p class="results__type">{{ currentSong?.title }}</p>
-            <p v-show="currentSong?.song?.title" class="results__song__name">
-                {{ currentSong?.song?.title }}
-            </p>
-            <p v-show="currentSong?.song?.artist" class="results__song__artist">
-                {{ currentSong?.song?.artist }}
-            </p>
-        </div>
+        <ul v-show="phase == 'results'" class="list-group shadow-sm">
+            <li class="list-group-item">Anime Title: {{ currentSong?.source }}</li>
+            <li class="list-group-item">Anime Opening: {{ currentSong.title }}</li>
+            <li v-show="currentSong?.song?.title" class="list-group-item">
+                Song Name: {{ currentSong?.song?.title }}
+            </li>
+            <li v-show="currentSong?.song?.artist" class="list-group-item">
+                Song Artist: {{ currentSong?.song.artist }}
+            </li>
+        </ul>
         <div class="results__stats">
-            <h4 class="results__song-num">
-                {{ songNumber }} / {{ totalSongs }}
-            </h4>
+            <h4 class="results__song-num">{{ songNumber }} / {{ totalSongs }}</h4>
             <h4 class="results__correctAnswers">{{ user.correctAnswers }}</h4>
         </div>
     </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters } from 'vuex'
 export default {
     computed: {
-        ...mapGetters('game', [
-            'currentSong',
-            'phase',
-            'songNumber',
-            'totalSongs',
-        ]),
+        ...mapGetters('game', ['currentSong', 'phase', 'songNumber', 'totalSongs']),
         ...mapGetters('user', ['user']),
     },
-};
+}
 </script>
 
 <style lang="scss" scoped>
@@ -40,8 +33,7 @@ export default {
     position: relative;
     height: 20rem;
     max-height: 20rem;
-    max-width: 55rem;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     &__info {
         * {
             margin: 1rem 0;

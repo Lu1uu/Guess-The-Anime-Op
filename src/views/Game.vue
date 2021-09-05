@@ -1,37 +1,30 @@
 <template>
-    <!-- <section v-if="hasUser" class="user">
-        <img class="user__avatar" :src="user.avatar" alt="userAvatar" />
-        <p class="user__name">{{ user.anilistUsername }}</p>
-    </section> -->
     <div class="container" v-if="!isGameOver">
         <Game_Results />
         <Game_Videoplayer />
         <Game_Guess />
-        <!-- <Game_Settings /> -->
     </div>
 </template>
 
 <script>
-import Game_Videoplayer from '@/components/Game/Game_Videoplayer';
-import Game_Guess from '@/components/Game/Game_Guess';
-import Game_Results from '@/components/Game/Game_Results';
-// import Game_Settings from '@/components/Game/Game_Settings';
+import Game_Videoplayer from '@/components/Game/Game_Videoplayer'
+import Game_Guess from '@/components/Game/Game_Guess'
+import Game_Results from '@/components/Game/Game_Results'
 
-import { mapActions, mapGetters } from 'vuex';
+import { mapActions, mapGetters } from 'vuex'
 
 export default {
     components: {
         Game_Videoplayer,
         Game_Guess,
         Game_Results,
-        // Game_Settings,
     },
     async mounted() {
-        await this.PopulateDatabase();
+        await this.PopulateDatabase()
         // await this.LoadPreferences();
-        await this.AnilistRequest('list');
-        await this.AnilistRequest('avatar');
-        await this.CreatePlaylist();
+        await this.AnilistRequest('list')
+        await this.AnilistRequest('avatar')
+        await this.CreatePlaylist()
     },
     computed: {
         ...mapGetters('game', ['isGameOver', 'playList']),
@@ -39,21 +32,24 @@ export default {
     },
     methods: {
         ...mapActions('game', ['CreatePlaylist', 'PopulateDatabase']),
-        ...mapActions('user', [
-            'AnilistRequest',
-            'FilterForUserList',
-            'LoadPreferences',
-        ]),
+        ...mapActions('user', ['AnilistRequest', 'FilterForUserList', 'LoadPreferences']),
     },
-};
+}
 </script>
 
 <style lang="scss" scoped>
 .container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    max-width: 50rem;
+    width: 100%;
+    max-width: 60rem;
 }
+
+.square {
+    background: orange;
+    &:nth-child(even) {
+        background: blue;
+    }
+}
+
 .user {
     position: absolute;
     left: 2rem;

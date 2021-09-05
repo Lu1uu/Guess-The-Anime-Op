@@ -5,10 +5,12 @@
 <style lang="scss">
 html {
     font-size: 62.5%;
+    @media (max-width: 640px) {
+        font-size: 52%;
+    }
 }
 
 body {
-    background-color: #f3f3f3;
     color: rgba(0, 0, 0, 0.8);
     display: flex;
     flex-direction: column;
@@ -20,5 +22,10 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+#app {
+    width: 100%;
+    min-height: 100vh;
 }
 </style>

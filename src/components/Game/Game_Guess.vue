@@ -1,21 +1,28 @@
 <template>
-    <div class="guess">
-        <input v-model.trim="guess" type="text" class="guess__input" />
-    </div>
-    <div v-show="showOptions" class="entries">
-        <p
-            @click="UpdateGuess(entry)"
-            class="entries__entry"
-            v-for="entry in possibleEntries"
-            :key="entry"
-        >
-            {{ entry }}
-        </p>
+    <div class="shadow-sm">
+        <input
+            v-model.trim="guess"
+            class="form-control"
+            list="datalistOptions"
+            id="exampleDataList"
+            placeholder="Guess anime"
+        />
+        <datalist v-show="showOptions" id="datalistOptions">
+            <option
+                @click="UpdateGuess(entry)"
+                @keyup.enter="UpdateGuess(entry)"
+                v-for="entry in possibleEntries"
+                :key="entry"
+                :value="entry"
+                >{{ entry }}
+            </option>
+        </datalist>
     </div>
 </template>
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
+
 export default {
     data() {
         return {
@@ -26,17 +33,20 @@ export default {
     },
     watch: {
         phase(phase) {
-            if (phase == 'results') this.CheckAnswer(this.guess)
-            else if (phase == 'done') this.guess = ''
+            if (phase == 'results') {
+                this.CheckAnswer(this.guess)
+            } else {
+                this.guess = ''
+                this.possibleEntries = []
+            }
         },
-        async guess(input) {
-            this.possibleEntries = await this.FilterSearch(input)
+        async guess() {
+            this.possibleEntries = await this.FilterSearch(this.guess)
             this.showOptions = true
         },
     },
     computed: {
-        ...mapGetters('game', ['currentSong', 'phase']),
-        ...mapGetters('user', ['user']),
+        ...mapGetters('game', ['phase']),
     },
     methods: {
         ...mapActions('game', ['CheckAnswer', 'FilterSearch']),
@@ -48,31 +58,9 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.guess {
-    &__input {
-        font-size: 1.6rem;
-        width: 100%;
-        border: 1px solid hsl(248, 53%, 58%);
-        padding: 0.5rem 1rem;
-        border-radius: 0.5rem;
-    }
-}
-
-.entries {
-    color: white;
-    max-width: 100%;
-    background: hsl(248, 53%, 58%);
-    max-height: 15rem;
-    overflow: auto;
-    &__entry {
-        font-size: 1.2rem;
-        cursor: pointer;
-        width: 100%;
-        padding: 1rem;
-        &:hover {
-            background: hsl(248, 53%, 48%);
-        }
-    }
+<style scoped>
+input {
+    padding: 0.8rem 1rem;
+    font-size: 1.4rem;
 }
 </style>

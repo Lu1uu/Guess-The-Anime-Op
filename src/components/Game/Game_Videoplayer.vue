@@ -1,7 +1,9 @@
 <template>
     <input
-        ref="video_volume"
         type="range"
+        class="form-range"
+        id="customRange1"
+        ref="video_volume"
         min="0"
         max="100"
         step="1"
@@ -23,29 +25,29 @@
             />
             Your browser does not support the video tag
         </video>
-        <div v-show="!isVisible" class="video__overlay">
-            {{ songTime - currentSongTime }}
-        </div>
+        <div v-show="!isVisible" class="video__overlay bg-dark">?</div>
     </div>
-    <div v-if="isHelperMode" class="video__buttons">
-        <!-- <TheButton class="video__button" @click="PlayVideo">Play</TheButton> -->
-        <!-- <TheButton class="video__button" @click="PauseVideo">Pause</TheButton>
-        <TheButton class="video__button" @click="RestartVideo"
-            >Restart</TheButton
-        >
-        <TheButton class="video__button" @click="HideVideo"
-            >Hide Video</TheButton
-        >
-        <TheButton class="video__button" @click="ShowVideo"
-            >Show Video</TheButton
-        > -->
-        <TheButton class="video__button" @click="SkipPhase">Skip</TheButton>
+    <div class="progress">
+        <div
+            class="progress-bar"
+            role="progressbar"
+            aria-valuenow="0"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            :style="progressWidth"
+        ></div>
+    </div>
+
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <button @click="SkipPhase" type="button" class="btn btn-outline-primary">
+            Skip
+        </button>
     </div>
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex';
-import helpers from '@/mixins/helpers.js';
+import { mapGetters, mapActions } from 'vuex'
+import helpers from '@/mixins/helpers.js'
 
 export default {
     mixins: [helpers],
@@ -56,20 +58,21 @@ export default {
             isSongOver: false,
             isHelperMode: true,
             startTime: 0,
-        };
+        }
     },
+
     watch: {
         phase(phase) {
             switch (phase) {
                 case 'done':
-                    this.NextVideo();
-                    break;
+                    this.NextVideo()
+                    break
                 case 'results':
-                    this.ShowResults();
-                    break;
+                    this.ShowResults()
+                    break
                 case 'guessing':
-                    this.HideVideo();
-                    break;
+                    this.HideVideo()
+                    break
             }
         },
     },
@@ -82,68 +85,68 @@ export default {
             'phase',
             'isGameOver',
         ]),
+        progressWidth() {
+            const percent = ((this.songTime - this.currentSongTime) / this.songTime) * 100
+            return { width: `${percent}%` }
+        },
     },
     methods: {
-        ...mapActions('game', [
-            'FetchNewSong',
-            'StartTimer',
-            'SkipPhase',
-            'MaxOutCurrentSongTime',
-        ]),
+        ...mapActions('game', ['FetchNewSong', 'StartTimer', 'SkipPhase', 'MaxOutCurrentSongTime']),
+
         NewVideo() {
-            this.SetIntervalForVideo();
-            this.SetVolume();
-            this.PlayVideo();
-            this.StartTimer();
-            console.log('Song: ', this.currentSong);
+            this.SetIntervalForVideo()
+            this.SetVolume()
+            this.PlayVideo()
+            this.StartTimer()
+            console.log('Song: ', this.currentSong)
         },
         SetIntervalForVideo() {
             this.startTime = Math.abs(
-                this.RandomInt(
-                    0,
-                    Math.floor(this.$refs.video.duration) - this.songTime
-                )
-            );
-            this.$refs.video.currentTime = this.startTime;
+                this.RandomInt(0, Math.floor(this.$refs.video.duration) - this.songTime)
+            )
+            this.$refs.video.currentTime = this.startTime
         },
         SetVolume() {
-            this.$refs.video.volume = this.$refs.video_volume.value / 100;
+            this.$refs.video.volume = this.$refs.video_volume.value / 100
         },
         ShowVideo() {
-            this.isVisible = true;
+            this.isVisible = true
         },
         HideVideo() {
-            this.isVisible = false;
+            this.isVisible = false
         },
         PlayVideo() {
-            this.$refs.video.play();
+            this.$refs.video.play()
         },
         PauseVideo() {
-            this.$refs.video.pause();
+            this.$refs.video.pause()
         },
         RestartVideo() {
-            this.$refs.video.currentTime = 0;
+            this.$refs.video.currentTime = 0
         },
         NextVideo() {
-            this.FetchNewSong();
-            this.PauseVideo();
-            this.RefreshComponent();
+            this.FetchNewSong()
+            this.PauseVideo()
+            this.RefreshComponent()
         },
 
         ShowResults() {
-            this.ShowVideo();
-            this.StartTimer();
-            this.$refs.video.currentTime = this.startTime;
+            this.ShowVideo()
+            this.StartTimer()
+            this.$refs.video.currentTime = this.startTime
         },
     },
-};
+}
 </script>
 
 <style lang="scss" scoped>
+.form-range {
+    max-width: 10rem;
+}
+
 .container {
     position: relative;
-    width: 50rem;
-    height: 30rem;
+    max-width: 62rem;
     border-radius: 1rem;
     overflow: hidden;
 }
@@ -151,13 +154,13 @@ export default {
     width: 100%;
     height: 100%;
     border-radius: inherit;
+
     &__overlay {
         position: absolute;
         width: 100%;
         height: 100%;
         top: 0;
         left: 0;
-        background: #333;
         display: grid;
         place-items: center;
         color: white;
@@ -167,10 +170,11 @@ export default {
     &__buttons {
         margin: 1rem 0;
         width: 100%;
-        display: flex;
-        justify-content: space-between;
+        // display: flex;
+        // justify-content: space-between;
     }
-    &__button {
+    &__button:not(:first-child) {
+        margin-left: 1rem;
     }
 }
 </style>
