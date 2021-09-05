@@ -23,9 +23,16 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+p,
+li {
+    font-weight: 200;
+}
+strong {
+    font-weight: 400;
+}
 
 #app {
+    margin-top: 10vh;
     width: 100%;
-    min-height: 100vh;
 }
 </style>
