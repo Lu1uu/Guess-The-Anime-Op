@@ -30,13 +30,21 @@ export default {
         Game_Song_Info,
     },
     watch: {
-        phase() {
-            if (this.phase == 'guessing') {
+        phase(value) {
+            if (value == 'guessing') {
                 this.updateCurrentFace('neutral')
+                document.body.style.backgroundColor = '#f8f9fa'
             }
-            if (this.phase == 'results') {
-                if (this.isCorrect) this.updateCurrentFace('happy')
-                else this.updateCurrentFace('sad')
+            if (value == 'results') {
+                setTimeout(() => {
+                    if (this.isCorrect) {
+                        this.updateCurrentFace('happy')
+                        document.body.style.backgroundColor = '#f8f9fa'
+                    } else {
+                        this.updateCurrentFace('sad')
+                        document.body.style.backgroundColor = 'gray'
+                    }
+                }, 0)
             }
         },
     },

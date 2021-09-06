@@ -88,8 +88,12 @@ export default {
             const entries = context.state.dataBase
             const possibleEntries = []
             for (let i = 0; i < entries.length; i++) {
-                if (entries[i].animeEnglish.toLowerCase().indexOf(input.toLowerCase()) > -1) {
+                if (
+                    entries[i].animeEnglish.toLowerCase().indexOf(input.toLowerCase()) > -1 ||
+                    entries[i].animeRomaji.toLowerCase().indexOf(input.toLowerCase()) > -1
+                ) {
                     possibleEntries.push(entries[i].animeEnglish)
+                    possibleEntries.push(entries[i].animeRomaji)
                 }
             }
             return [...new Set(possibleEntries)]
@@ -113,12 +117,14 @@ export default {
             context.commit('SkipPhase')
         },
         CheckAnswer(context, answer = '') {
-            const isCorrect =
-                answer.toLowerCase() == context.getters.currentSong.animeEnglish.toLowerCase()
+            console.log(context.getters.currentSong)
+            let isCorrect =
+                answer.toLowerCase() == context.getters.currentSong.animeEnglish.toLowerCase() ||
+                answer.toLowerCase() == context.getters.currentSong.animeRomaji.toLowerCase()
                     ? true
                     : false
             if (isCorrect) {
-                context.state.isCorrect = true
+                // context.state.isCorrect = true
                 context.commit('user/IncrementScore', isCorrect, {
                     root: true,
                 })
@@ -130,8 +136,6 @@ export default {
                 setTimeout(() => {
                     party.confetti($app)
                 }, 3000)
-            } else {
-                context.state.isCorrect = false
             }
             context.commit('CheckCorrect', isCorrect)
         },
