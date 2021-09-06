@@ -9,10 +9,10 @@
             Anime Opening: <strong>{{ currentSong?.type }}</strong>
         </li>
         <li v-show="currentSong?.songName" class="list-group-item">
-            Song Name: <strong>{{ currentSong?.song?.title }}</strong>
+            Song Name: <strong>{{ currentSong?.songName }}</strong>
         </li>
         <li v-show="currentSong?.artist" class="list-group-item">
-            Song Artist: <strong>{{ currentSong?.song?.artist }}</strong>
+            Song Artist: <strong>{{ currentSong?.artist }}</strong>
         </li>
     </ul>
 </template>

@@ -29,6 +29,9 @@ export default {
     components: {
         Game_Song_Info,
     },
+    data() {
+        return {}
+    },
     watch: {
         phase(value) {
             if (value == 'guessing') {
@@ -42,7 +45,7 @@ export default {
                         document.body.style.backgroundColor = '#f8f9fa'
                     } else {
                         this.updateCurrentFace('sad')
-                        document.body.style.backgroundColor = 'gray'
+                        document.body.style.backgroundColor = '#333'
                     }
                 }, 0)
             }
