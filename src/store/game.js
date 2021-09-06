@@ -124,7 +124,6 @@ export default {
                     ? true
                     : false
             if (isCorrect) {
-                // context.state.isCorrect = true
                 context.commit('user/IncrementScore', isCorrect, {
                     root: true,
                 })

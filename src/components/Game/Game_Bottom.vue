@@ -74,6 +74,7 @@ export default {
     flex-direction: row;
     width: 100%;
     max-height: 13rem;
+    overflow: auto;
     // flex-wrap: wrap;
     img {
         max-width: 13rem;
@@ -81,10 +82,12 @@ export default {
     }
     .card-body {
         display: flex;
-        gap: 1rem;
+        gap: 2rem;
         justify-content: space-between;
         text-align: center;
-        flex-wrap: wrap;
+    }
+    .card-title {
+        display: block;
     }
 }
 
