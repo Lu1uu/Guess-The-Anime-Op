@@ -145,7 +145,7 @@ export default {
 .container {
     position: relative;
     max-width: 62rem;
-    border-radius: 1rem;
+    border-radius: 0.2rem;
     overflow: hidden;
 }
 .video {
