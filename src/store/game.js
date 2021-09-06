@@ -1,8 +1,9 @@
+import party from 'party-js'
 export default {
     namespaced: true,
     state: {
         playList: [],
-        playListSize: 3,
+        playListSize: 10,
         currentSong: 1,
         songTime: 25,
         currentSongTime: 0,
@@ -10,7 +11,11 @@ export default {
         isCorrect: false,
         isGameOver: true,
     },
+
     getters: {
+        isCorrect(state) {
+            return state.isCorrect
+        },
         phase(state) {
             if (state.phase % 3 == 0) return 'done'
             if (state.phase % 3 == 1) return 'guessing'
@@ -68,10 +73,10 @@ export default {
             const possibleEntries = context.state.dataBase.filter((entry) => {
                 switch (type) {
                     case 'op':
-                        if (entry.title.toLowerCase().includes(type)) return entry
+                        if (entry.type.toLowerCase().includes(type)) return entry
                         break
                     case 'ending':
-                        if (entry.title.toLowerCase().includes(type)) return entry
+                        if (entry.type.toLowerCase().includes(type)) return entry
                         break
                     default:
                         return entry
@@ -83,8 +88,8 @@ export default {
             const entries = context.state.dataBase
             const possibleEntries = []
             for (let i = 0; i < entries.length; i++) {
-                if (entries[i].source.toLowerCase().indexOf(input.toLowerCase()) > -1) {
-                    possibleEntries.push(entries[i].source)
+                if (entries[i].animeEnglish.toLowerCase().indexOf(input.toLowerCase()) > -1) {
+                    possibleEntries.push(entries[i].animeEnglish)
                 }
             }
             return [...new Set(possibleEntries)]
@@ -109,13 +114,25 @@ export default {
         },
         CheckAnswer(context, answer = '') {
             const isCorrect =
-                answer.toLowerCase() == context.getters.currentSong.source.toLowerCase()
+                answer.toLowerCase() == context.getters.currentSong.animeEnglish.toLowerCase()
                     ? true
                     : false
-            if (isCorrect)
+            if (isCorrect) {
+                context.state.isCorrect = true
                 context.commit('user/IncrementScore', isCorrect, {
                     root: true,
                 })
+                const $app = document.getElementById('app')
+                party.confetti($app)
+                setTimeout(() => {
+                    party.confetti($app)
+                }, 1500)
+                setTimeout(() => {
+                    party.confetti($app)
+                }, 3000)
+            } else {
+                context.state.isCorrect = false
+            }
             context.commit('CheckCorrect', isCorrect)
         },
         SetGuessTime(context, guessTime) {

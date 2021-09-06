@@ -11,6 +11,7 @@
         "@popperjs/core": "^2.10.1",
         "bootstrap": "^5.1.0",
         "core-js": "^3.6.5",
+        "party-js": "^2.0.1",
         "sass": "^1.38.2",
         "vue": "^3.0.0",
         "vue-router": "^4.0.0-0",

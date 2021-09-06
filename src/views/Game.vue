@@ -1,8 +1,7 @@
 <template>
     <div class="container" v-if="!isGameOver">
-        <!-- <Game_Results /> -->
         <Game_Videoplayer />
-        <Game_Guess />
+        <Game_Guess v-if="phase == 'guessing'" />
         <Game_Bottom />
     </div>
 </template>
@@ -10,7 +9,6 @@
 <script>
 import Game_Videoplayer from '@/components/Game/Game_Videoplayer'
 import Game_Guess from '@/components/Game/Game_Guess'
-// import Game_Results from '@/components/Game/Game_Results'
 import Game_Bottom from '@/components/Game/Game_Bottom'
 
 import { mapActions, mapGetters } from 'vuex'
@@ -19,7 +17,6 @@ export default {
     components: {
         Game_Videoplayer,
         Game_Guess,
-        // Game_Results,
         Game_Bottom,
     },
     async mounted() {
@@ -30,7 +27,7 @@ export default {
         await this.CreatePlaylist()
     },
     computed: {
-        ...mapGetters('game', ['isGameOver', 'playList']),
+        ...mapGetters('game', ['isGameOver', 'playList', 'phase']),
         ...mapGetters('user', ['user', 'hasUser']),
     },
     methods: {

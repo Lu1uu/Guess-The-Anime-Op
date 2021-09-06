@@ -1,7 +1,7 @@
 <template>
     <div class="my-container">
         <div class="card profile-card">
-            <img src="https://avatars.githubusercontent.com/u/89555647?v=4" alt="..." />
+            <img :src="user.currentFace" alt="..." />
             <div class="card-body">
                 <div class="points">
                     <strong class="card-title">Points</strong>
@@ -11,7 +11,7 @@
                 <div class="songs">
                     <strong class="card-title">Songs Left</strong>
                     <hr />
-                    <p class="card-text">{{ totalSongs - songNumber + 1 }}</p>
+                    <p class="card-text">{{ totalSongs - songNumber }}</p>
                 </div>
             </div>
         </div>
@@ -23,15 +23,29 @@
 
 <script>
 import Game_Song_Info from '@/components/Game/Game_Song_Info'
-import { mapGetters } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 
 export default {
     components: {
         Game_Song_Info,
     },
+    watch: {
+        phase() {
+            if (this.phase == 'guessing') {
+                this.updateCurrentFace('neutral')
+            }
+            if (this.phase == 'results') {
+                if (this.isCorrect) this.updateCurrentFace('happy')
+                else this.updateCurrentFace('sad')
+            }
+        },
+    },
     computed: {
-        ...mapGetters('game', ['currentSong', 'phase', 'songNumber', 'totalSongs']),
+        ...mapGetters('game', ['currentSong', 'phase', 'songNumber', 'totalSongs', 'isCorrect']),
         ...mapGetters('user', ['user']),
+    },
+    methods: {
+        ...mapActions('user', ['updateCurrentFace']),
     },
 }
 </script>

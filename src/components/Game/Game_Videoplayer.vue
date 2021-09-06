@@ -14,15 +14,12 @@
         <video
             v-if="!refreshComponent"
             @loadeddata="NewVideo"
+            @canplaythrough.once="CanPlay"
             class="video"
             ref="video"
             disablePictureInPicture
         >
-            <source
-                :src="`https://openings.moe/video/${currentSong?.file}.mp4`"
-                ref="video_source"
-                disablePictureInPicture
-            />
+            <source :src="currentSong.linkWebm" ref="video_source" disablePictureInPicture />
             Your browser does not support the video tag
         </video>
         <div v-show="!isVisible" class="video__overlay bg-dark">?</div>
@@ -96,9 +93,10 @@ export default {
         NewVideo() {
             this.SetIntervalForVideo()
             this.SetVolume()
+        },
+        CanPlay() {
             this.PlayVideo()
             this.StartTimer()
-            console.log('Song: ', this.currentSong)
         },
         SetIntervalForVideo() {
             this.startTime = Math.abs(
