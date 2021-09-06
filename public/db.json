@@ -120,19 +120,19 @@
         "linkMP3": "https://files.catbox.moe/09ies4.mp3"
     },
     {
-        "songNumber": 9,
+        "songNumber": 49,
         "animeEnglish": "Assassination Classroom Second Season",
         "animeRomaji": "Ansatsu Kyōshitsu Final Season",
         "annId": 17686,
-        "songName": "Bye Bye YESTERDAY",
+        "songName": "QUESTION",
         "artist": "3-nen E-gumi Utatan",
-        "type": "Opening 2",
+        "type": "Opening 1",
         "correctCount": 0,
         "activePlayers": 1,
-        "startSample": 17,
-        "videoLength": 89.1,
-        "linkWebm": "https://files.catbox.moe/cpiuvq.webm",
-        "linkMP3": "https://files.catbox.moe/pv0lzf.mp3"
+        "startSample": 57,
+        "videoLength": 89.43,
+        "linkWebm": "https://files.catbox.moe/v3m099.webm",
+        "linkMP3": "https://files.catbox.moe/ns96qt.mp3"
     },
     {
         "songNumber": 10,
@@ -150,19 +150,19 @@
         "linkMP3": "https://files.catbox.moe/w7k7l9.mp3"
     },
     {
-        "songNumber": 11,
+        "songNumber": 50,
         "animeEnglish": "Nichijou: My Ordinary Life",
         "animeRomaji": "Nichijō",
         "annId": 12142,
-        "songName": "Hyadain no Jōjō Yuujō",
+        "songName": "Hyadain no Kakakata☆Kataomoi-C",
         "artist": "Hyadain",
-        "type": "Opening 2",
+        "type": "Opening 1",
         "correctCount": 0,
         "activePlayers": 1,
-        "startSample": 3,
-        "videoLength": 88.72,
-        "linkWebm": "https://files.catbox.moe/cx0gjs.webm",
-        "linkMP3": "https://files.catbox.moe/6txfb7.mp3"
+        "startSample": 49,
+        "videoLength": 88.3,
+        "linkWebm": "https://files.catbox.moe/c89iop.webm",
+        "linkMP3": "https://files.catbox.moe/kc47c4.mp3"
     },
     {
         "songNumber": 12,
@@ -450,7 +450,7 @@
         "linkMP3": "https://files.catbox.moe/ewhvjt.mp3"
     },
     {
-        "songNumber": 12,
+        "songNumber": 80,
         "animeEnglish": "Noragami",
         "animeRomaji": "Noragami",
         "annId": 15585,
@@ -459,7 +459,7 @@
         "type": "Opening 1",
         "correctCount": 0,
         "activePlayers": 1,
-        "startSample": 3,
+        "startSample": 20,
         "videoLength": 89.51,
         "linkWebm": "https://files.catbox.moe/cnduhh.webm",
         "linkMP3": "https://files.catbox.moe/4xappz.mp3"
@@ -705,7 +705,7 @@
         "linkMP3": "https://files.catbox.moe/1uhrww.mp3"
     },
     {
-        "songNumber": 31,
+        "songNumber": 48,
         "animeEnglish": "Mob Psycho 100",
         "animeRomaji": "Mob Psycho 100",
         "annId": 18064,
@@ -714,7 +714,7 @@
         "type": "Opening 1",
         "correctCount": 0,
         "activePlayers": 1,
-        "startSample": 71,
+        "startSample": 19,
         "videoLength": 89.01,
         "linkWebm": "https://files.catbox.moe/axn8xg.webm",
         "linkMP3": "https://files.catbox.moe/zeh0v8.mp3"
@@ -840,7 +840,7 @@
         "linkMP3": "https://files.catbox.moe/3rr4oz.mp3"
     },
     {
-        "songNumber": 40,
+        "songNumber": 21,
         "animeEnglish": "Detroit Metal City",
         "animeRomaji": "Detroit Metal City",
         "annId": 10172,
@@ -849,7 +849,7 @@
         "type": "Opening 1",
         "correctCount": 0,
         "activePlayers": 1,
-        "startSample": 46,
+        "startSample": 42,
         "videoLength": 87.84,
         "linkWebm": "https://files.catbox.moe/xxuz3a.webm",
         "linkMP3": "https://files.catbox.moe/1nb7pn.mp3"
@@ -1155,7 +1155,7 @@
         "linkMP3": "https://files.catbox.moe/g0fiv8.mp3"
     },
     {
-        "songNumber": 62,
+        "songNumber": 55,
         "animeEnglish": "Monster High: Kowa-ike Girls",
         "animeRomaji": "Monster High: Kowa-ike Girls",
         "annId": 16416,
@@ -1164,7 +1164,7 @@
         "type": "Opening 1",
         "correctCount": 0,
         "activePlayers": 1,
-        "startSample": 10,
+        "startSample": 0,
         "videoLength": 29.66,
         "linkWebm": "https://files.catbox.moe/qt385k.webm",
         "linkMP3": "https://files.catbox.moe/437ren.mp3"
@@ -1425,7 +1425,7 @@
         "linkMP3": "https://files.catbox.moe/gdvka1.mp3"
     },
     {
-        "songNumber": 80,
+        "songNumber": 78,
         "animeEnglish": "One Punch Man",
         "animeRomaji": "One Punch Man",
         "annId": 16840,
@@ -1434,7 +1434,7 @@
         "type": "Opening 1",
         "correctCount": 0,
         "activePlayers": 1,
-        "startSample": 45,
+        "startSample": 64,
         "videoLength": 88.89,
         "linkWebm": "https://files.catbox.moe/p5bjvw.webm",
         "linkMP3": "https://files.catbox.moe/cz0ubn.mp3"
@@ -1485,7 +1485,7 @@
         "linkMP3": "https://files.catbox.moe/i7cfjq.mp3"
     },
     {
-        "songNumber": 84,
+        "songNumber": 70,
         "animeEnglish": "Ouran High School Host Club",
         "animeRomaji": "Ōran Kōkō Host Club",
         "annId": 6122,
@@ -1494,7 +1494,7 @@
         "type": "Opening 1",
         "correctCount": 0,
         "activePlayers": 1,
-        "startSample": 45,
+        "startSample": 0,
         "videoLength": 76.41,
         "linkWebm": "https://files.catbox.moe/wru9uk.webm",
         "linkMP3": "https://files.catbox.moe/snszth.mp3"
@@ -1530,19 +1530,19 @@
         "linkMP3": "https://files.catbox.moe/dwbak7.mp3"
     },
     {
-        "songNumber": 87,
+        "songNumber": 98,
         "animeEnglish": "The Numbers",
         "animeRomaji": "Nanbaka",
-        "annId": 18956,
+        "annId": 18196,
         "songName": "Rin! Rin! Hi! Hi!",
-        "artist": "Hashiguchikanaderiya",
+        "artist": "Hashiguchikanaderiya hugs The Super Ball",
         "type": "Opening 1",
         "correctCount": 0,
         "activePlayers": 1,
-        "startSample": 28,
-        "videoLength": 86.75,
-        "linkWebm": "https://files.catbox.moe/hg0ij6.webm",
-        "linkMP3": "https://files.catbox.moe/jsgekx.mp3"
+        "startSample": 61,
+        "videoLength": 87.91,
+        "linkWebm": "https://files.catbox.moe/iobsd5.webm",
+        "linkMP3": "https://files.catbox.moe/pyz4kz.mp3"
     },
     {
         "songNumber": 88,
@@ -1635,19 +1635,19 @@
         "linkMP3": "https://files.catbox.moe/nn752u.mp3"
     },
     {
-        "songNumber": 94,
+        "songNumber": 71,
         "animeEnglish": "Aldnoah.Zero",
         "animeRomaji": "Aldnoah.Zero",
-        "annId": 16028,
-        "songName": "aLIEz",
+        "annId": 16305,
+        "songName": "&Z",
         "artist": "SawanoHiroyuki[nZk]:mizuki",
-        "type": "Ending 2",
+        "type": "Opening 1",
         "correctCount": 0,
         "activePlayers": 1,
-        "startSample": 44,
-        "videoLength": 88.03,
-        "linkWebm": "https://files.catbox.moe/nmp4km.webm",
-        "linkMP3": "https://files.catbox.moe/u6n2vs.mp3"
+        "startSample": 0,
+        "videoLength": 88.3,
+        "linkWebm": "https://files.catbox.moe/qhl9mg.webm",
+        "linkMP3": "https://files.catbox.moe/w9ngji.mp3"
     },
     {
         "songNumber": 95,
@@ -1888,21 +1888,6 @@
         "videoLength": 59.98,
         "linkWebm": "https://files.catbox.moe/7ogvbu.webm",
         "linkMP3": "https://files.catbox.moe/6tmn0i.mp3"
-    },
-    {
-        "songNumber": 11,
-        "animeEnglish": "Detroit Metal City",
-        "animeRomaji": "Detroit Metal City",
-        "annId": 10172,
-        "songName": "SATSUGAI",
-        "artist": "Yuji Ueda",
-        "type": "Opening 1",
-        "correctCount": 0,
-        "activePlayers": 1,
-        "startSample": 6,
-        "videoLength": 87.84,
-        "linkWebm": "https://files.catbox.moe/xxuz3a.webm",
-        "linkMP3": "https://files.catbox.moe/1nb7pn.mp3"
     },
     {
         "songNumber": 12,
@@ -2550,21 +2535,6 @@
         "linkMP3": "https://files.catbox.moe/4dbck5.mp3"
     },
     {
-        "songNumber": 55,
-        "animeEnglish": "Monster High: Kowa-ike Girls",
-        "animeRomaji": "Monster High: Kowa-ike Girls",
-        "annId": 16416,
-        "songName": "Monster High",
-        "artist": "amorecarina feat.Chu-Z KAEDE",
-        "type": "Opening 1",
-        "correctCount": 0,
-        "activePlayers": 1,
-        "startSample": 0,
-        "videoLength": 29.66,
-        "linkWebm": "https://files.catbox.moe/qt385k.webm",
-        "linkMP3": "https://files.catbox.moe/437ren.mp3"
-    },
-    {
         "songNumber": 56,
         "animeEnglish": "Boruto: Naruto Next Generations",
         "animeRomaji": "Boruto: Naruto Next Generations",
@@ -2775,36 +2745,6 @@
         "linkMP3": "https://files.catbox.moe/uflupl.mp3"
     },
     {
-        "songNumber": 70,
-        "animeEnglish": "Ouran High School Host Club",
-        "animeRomaji": "Ōran Kōkō Host Club",
-        "annId": 6122,
-        "songName": "Sakura kiss",
-        "artist": "Chieko Kawabe",
-        "type": "Opening 1",
-        "correctCount": 0,
-        "activePlayers": 1,
-        "startSample": 0,
-        "videoLength": 76.41,
-        "linkWebm": "https://files.catbox.moe/wru9uk.webm",
-        "linkMP3": "https://files.catbox.moe/snszth.mp3"
-    },
-    {
-        "songNumber": 71,
-        "animeEnglish": "Aldnoah.Zero",
-        "animeRomaji": "Aldnoah.Zero",
-        "annId": 16305,
-        "songName": "&Z",
-        "artist": "SawanoHiroyuki[nZk]:mizuki",
-        "type": "Opening 1",
-        "correctCount": 0,
-        "activePlayers": 1,
-        "startSample": 0,
-        "videoLength": 88.3,
-        "linkWebm": "https://files.catbox.moe/qhl9mg.webm",
-        "linkMP3": "https://files.catbox.moe/w9ngji.mp3"
-    },
-    {
         "songNumber": 72,
         "animeEnglish": "Karaoke Senshi Mike Jirō",
         "animeRomaji": "Karaoke Senshi Mike Jirō",
@@ -2835,7 +2775,7 @@
         "linkMP3": "https://files.catbox.moe/juzt4c.mp3"
     },
     {
-        "songNumber": 74,
+        "songNumber": 2,
         "animeEnglish": "Ms. Koizumi loves ramen noodles",
         "animeRomaji": "Ramen Daisuki Koizumi-san",
         "annId": 19675,
@@ -2844,7 +2784,7 @@
         "type": "Opening 1",
         "correctCount": 0,
         "activePlayers": 1,
-        "startSample": 14,
+        "startSample": 16,
         "videoLength": 88.42,
         "linkWebm": "https://files.catbox.moe/u2iqi3.webm",
         "linkMP3": "https://files.catbox.moe/j32bey.mp3"
@@ -3255,21 +3195,6 @@
         "linkMP3": "https://files.catbox.moe/phzbzh.mp3"
     },
     {
-        "songNumber": 2,
-        "animeEnglish": "Ms. Koizumi loves ramen noodles",
-        "animeRomaji": "Ramen Daisuki Koizumi-san",
-        "annId": 19675,
-        "songName": "FEELING AROUND",
-        "artist": "Minori Suzuki",
-        "type": "Opening 1",
-        "correctCount": 0,
-        "activePlayers": 1,
-        "startSample": 16,
-        "videoLength": 88.42,
-        "linkWebm": "https://files.catbox.moe/u2iqi3.webm",
-        "linkMP3": "https://files.catbox.moe/j32bey.mp3"
-    },
-    {
         "songNumber": 3,
         "animeEnglish": "Kenkō Zenrakei Suiei-bu Umishō",
         "animeRomaji": "Kenkō Zenrakei Suiei-bu Umishō",
@@ -3538,21 +3463,6 @@
         "videoLength": 90.05,
         "linkWebm": "https://files.catbox.moe/69q4ii.webm",
         "linkMP3": "https://files.catbox.moe/2dt37s.mp3"
-    },
-    {
-        "songNumber": 21,
-        "animeEnglish": "Detroit Metal City",
-        "animeRomaji": "Detroit Metal City",
-        "annId": 10172,
-        "songName": "SATSUGAI",
-        "artist": "Yuji Ueda",
-        "type": "Opening 1",
-        "correctCount": 0,
-        "activePlayers": 1,
-        "startSample": 42,
-        "videoLength": 87.84,
-        "linkWebm": "https://files.catbox.moe/xxuz3a.webm",
-        "linkMP3": "https://files.catbox.moe/1nb7pn.mp3"
     },
     {
         "songNumber": 22,
@@ -3943,51 +3853,6 @@
         "videoLength": 88.01,
         "linkWebm": "https://files.catbox.moe/fil3iv.webm",
         "linkMP3": "https://files.catbox.moe/k81ixn.mp3"
-    },
-    {
-        "songNumber": 48,
-        "animeEnglish": "Mob Psycho 100",
-        "animeRomaji": "Mob Psycho 100",
-        "annId": 18064,
-        "songName": "99",
-        "artist": "MOB CHOIR",
-        "type": "Opening 1",
-        "correctCount": 0,
-        "activePlayers": 1,
-        "startSample": 19,
-        "videoLength": 89.01,
-        "linkWebm": "https://files.catbox.moe/axn8xg.webm",
-        "linkMP3": "https://files.catbox.moe/zeh0v8.mp3"
-    },
-    {
-        "songNumber": 49,
-        "animeEnglish": "Assassination Classroom Second Season",
-        "animeRomaji": "Ansatsu Kyōshitsu Final Season",
-        "annId": 17686,
-        "songName": "QUESTION",
-        "artist": "3-nen E-gumi Utatan",
-        "type": "Opening 1",
-        "correctCount": 0,
-        "activePlayers": 1,
-        "startSample": 57,
-        "videoLength": 89.43,
-        "linkWebm": "https://files.catbox.moe/v3m099.webm",
-        "linkMP3": "https://files.catbox.moe/ns96qt.mp3"
-    },
-    {
-        "songNumber": 50,
-        "animeEnglish": "Nichijou: My Ordinary Life",
-        "animeRomaji": "Nichijō",
-        "annId": 12142,
-        "songName": "Hyadain no Kakakata☆Kataomoi-C",
-        "artist": "Hyadain",
-        "type": "Opening 1",
-        "correctCount": 0,
-        "activePlayers": 1,
-        "startSample": 49,
-        "videoLength": 88.3,
-        "linkWebm": "https://files.catbox.moe/c89iop.webm",
-        "linkMP3": "https://files.catbox.moe/kc47c4.mp3"
     },
     {
         "songNumber": 51,
@@ -4395,21 +4260,6 @@
         "linkMP3": "https://files.catbox.moe/hfltu6.mp3"
     },
     {
-        "songNumber": 78,
-        "animeEnglish": "One Punch Man",
-        "animeRomaji": "One Punch Man",
-        "annId": 16840,
-        "songName": "THE HERO !! ~Ikareru Ken ni Honō o Tsukeru~",
-        "artist": "JAM Project",
-        "type": "Opening 1",
-        "correctCount": 0,
-        "activePlayers": 1,
-        "startSample": 64,
-        "videoLength": 88.89,
-        "linkWebm": "https://files.catbox.moe/p5bjvw.webm",
-        "linkMP3": "https://files.catbox.moe/cz0ubn.mp3"
-    },
-    {
         "songNumber": 79,
         "animeEnglish": "Tayutama: Kiss on My Deity",
         "animeRomaji": "Tayutama: Kiss on My Deity",
@@ -4423,21 +4273,6 @@
         "videoLength": 91.59,
         "linkWebm": "https://files.catbox.moe/ut5lz5.webm",
         "linkMP3": "https://files.catbox.moe/ahdwi0.mp3"
-    },
-    {
-        "songNumber": 80,
-        "animeEnglish": "Noragami",
-        "animeRomaji": "Noragami",
-        "annId": 15585,
-        "songName": "Goya no Machiawase",
-        "artist": "Hello Sleepwalkers",
-        "type": "Opening 1",
-        "correctCount": 0,
-        "activePlayers": 1,
-        "startSample": 20,
-        "videoLength": 89.51,
-        "linkWebm": "https://files.catbox.moe/cnduhh.webm",
-        "linkMP3": "https://files.catbox.moe/4xappz.mp3"
     },
     {
         "songNumber": 81,
@@ -4693,21 +4528,6 @@
         "videoLength": 89.51,
         "linkWebm": "https://files.catbox.moe/dzijeo.webm",
         "linkMP3": "https://files.catbox.moe/vyluyd.mp3"
-    },
-    {
-        "songNumber": 98,
-        "animeEnglish": "The Numbers",
-        "animeRomaji": "Nanbaka",
-        "annId": 18196,
-        "songName": "Rin! Rin! Hi! Hi!",
-        "artist": "Hashiguchikanaderiya hugs The Super Ball",
-        "type": "Opening 1",
-        "correctCount": 0,
-        "activePlayers": 1,
-        "startSample": 61,
-        "videoLength": 87.91,
-        "linkWebm": "https://files.catbox.moe/iobsd5.webm",
-        "linkMP3": "https://files.catbox.moe/pyz4kz.mp3"
     },
     {
         "songNumber": 99,
