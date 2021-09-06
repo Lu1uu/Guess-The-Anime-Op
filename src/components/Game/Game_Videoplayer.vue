@@ -37,7 +37,7 @@
 
     <div class="btn-group" role="group" aria-label="Basic example">
         <button @click="SkipPhase" type="button" class="btn btn-outline-primary">
-            Skip
+            Skip / Check Answer
         </button>
     </div>
 </template>
