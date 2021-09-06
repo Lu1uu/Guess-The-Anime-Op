@@ -60,7 +60,7 @@
         "linkMP3": "https://files.catbox.moe/k3fsgp.mp3"
     },
     {
-        "songNumber": 5,
+        "songNumber": 3,
         "animeEnglish": "The Quintessential Quintuplets",
         "animeRomaji": "Gotōbun no Hanayome",
         "annId": 21514,
@@ -69,7 +69,7 @@
         "type": "Opening 1",
         "correctCount": 0,
         "activePlayers": 1,
-        "startSample": 26,
+        "startSample": 2,
         "videoLength": 89.01,
         "linkWebm": "https://files.catbox.moe/uctz6h.webm",
         "linkMP3": "https://files.catbox.moe/p6wnbe.mp3"
@@ -90,19 +90,19 @@
         "linkMP3": "https://files.catbox.moe/xzocsz.mp3"
     },
     {
-        "songNumber": 7,
+        "songNumber": 24,
         "animeEnglish": "Black Clover",
         "animeRomaji": "Black Clover",
         "annId": 19743,
-        "songName": "Black Catcher",
-        "artist": "Vickeblanka",
-        "type": "Opening 10",
+        "songName": "JUSTadICE",
+        "artist": "Seiko Oomori",
+        "type": "Opening 7",
         "correctCount": 0,
         "activePlayers": 1,
-        "startSample": 1,
-        "videoLength": 90.05,
-        "linkWebm": "https://files.catbox.moe/4ike31.webm",
-        "linkMP3": "https://files.catbox.moe/9ia0nj.mp3"
+        "startSample": 29,
+        "videoLength": 89.51,
+        "linkWebm": "https://files.catbox.moe/259rx3.webm",
+        "linkMP3": "https://files.catbox.moe/tify0j.mp3"
     },
     {
         "songNumber": 8,
@@ -180,7 +180,7 @@
         "linkMP3": "https://files.catbox.moe/x2plwa.mp3"
     },
     {
-        "songNumber": 13,
+        "songNumber": 26,
         "animeEnglish": "Zombie Land Saga",
         "animeRomaji": "Zombie Land Saga",
         "annId": 21363,
@@ -189,7 +189,7 @@
         "type": "Opening 2",
         "correctCount": 0,
         "activePlayers": 1,
-        "startSample": 38,
+        "startSample": 3,
         "videoLength": 89.03,
         "linkWebm": "https://files.catbox.moe/dg6kn3.webm",
         "linkMP3": "https://files.catbox.moe/efz9ij.mp3"
@@ -328,21 +328,6 @@
         "videoLength": 80.05,
         "linkWebm": "https://files.catbox.moe/z7761u.webm",
         "linkMP3": "https://files.catbox.moe/imax0c.mp3"
-    },
-    {
-        "songNumber": 3,
-        "animeEnglish": "The Quintessential Quintuplets",
-        "animeRomaji": "Gotōbun no Hanayome",
-        "annId": 21514,
-        "songName": "Gotōbun no Kimochi",
-        "artist": "Nakano-ke no Itsutsugo",
-        "type": "Opening 1",
-        "correctCount": 0,
-        "activePlayers": 1,
-        "startSample": 2,
-        "videoLength": 89.01,
-        "linkWebm": "https://files.catbox.moe/uctz6h.webm",
-        "linkMP3": "https://files.catbox.moe/p6wnbe.mp3"
     },
     {
         "songNumber": 4,
@@ -645,21 +630,6 @@
         "linkMP3": "https://files.catbox.moe/f2r9or.mp3"
     },
     {
-        "songNumber": 24,
-        "animeEnglish": "Black Clover",
-        "animeRomaji": "Black Clover",
-        "annId": 19743,
-        "songName": "JUSTadICE",
-        "artist": "Seiko Oomori",
-        "type": "Opening 7",
-        "correctCount": 0,
-        "activePlayers": 1,
-        "startSample": 29,
-        "videoLength": 89.51,
-        "linkWebm": "https://files.catbox.moe/259rx3.webm",
-        "linkMP3": "https://files.catbox.moe/tify0j.mp3"
-    },
-    {
         "songNumber": 25,
         "animeEnglish": "School-Live!",
         "animeRomaji": "Gakkō Gurashi!",
@@ -673,21 +643,6 @@
         "videoLength": 89.93,
         "linkWebm": "https://files.catbox.moe/w1ueqa.webm",
         "linkMP3": "https://files.catbox.moe/36tmln.mp3"
-    },
-    {
-        "songNumber": 26,
-        "animeEnglish": "Zombie Land Saga",
-        "animeRomaji": "Zombie Land Saga",
-        "annId": 21363,
-        "songName": "Adabana Necromancy",
-        "artist": "FranChouChou",
-        "type": "Opening 2",
-        "correctCount": 0,
-        "activePlayers": 1,
-        "startSample": 3,
-        "videoLength": 89.03,
-        "linkWebm": "https://files.catbox.moe/dg6kn3.webm",
-        "linkMP3": "https://files.catbox.moe/efz9ij.mp3"
     },
     {
         "songNumber": 27,
@@ -825,19 +780,19 @@
         "linkMP3": "https://files.catbox.moe/j433hj.mp3"
     },
     {
-        "songNumber": 36,
+        "songNumber": 55,
         "animeEnglish": "Teekyuu",
         "animeRomaji": "Teekyuu",
-        "annId": 16639,
-        "songName": "Fattoshite Tōgenkyō",
-        "artist": "Suzuko Mimori",
+        "annId": 15377,
+        "songName": "Menimenimanimani",
+        "artist": "Kyōko Narumi",
         "type": "Opening 1",
         "correctCount": 0,
         "activePlayers": 1,
-        "startSample": 0,
-        "videoLength": 30,
-        "linkWebm": "https://files.catbox.moe/5sbrgt.webm",
-        "linkMP3": "https://files.catbox.moe/r4lbwd.mp3"
+        "startSample": 5,
+        "videoLength": 29.99,
+        "linkWebm": "https://files.catbox.moe/9nk4ex.webm",
+        "linkMP3": "https://files.catbox.moe/x9cs8e.mp3"
     },
     {
         "songNumber": 37,
@@ -1108,21 +1063,6 @@
         "videoLength": 90.06,
         "linkWebm": "https://files.catbox.moe/dlvkgy.webm",
         "linkMP3": "https://files.catbox.moe/z0hzhp.mp3"
-    },
-    {
-        "songNumber": 55,
-        "animeEnglish": "Teekyuu",
-        "animeRomaji": "Teekyuu",
-        "annId": 15377,
-        "songName": "Menimenimanimani",
-        "artist": "Kyōko Narumi",
-        "type": "Opening 1",
-        "correctCount": 0,
-        "activePlayers": 1,
-        "startSample": 5,
-        "videoLength": 29.99,
-        "linkWebm": "https://files.catbox.moe/9nk4ex.webm",
-        "linkMP3": "https://files.catbox.moe/x9cs8e.mp3"
     },
     {
         "songNumber": 56,
