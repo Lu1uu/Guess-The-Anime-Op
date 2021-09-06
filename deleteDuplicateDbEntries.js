@@ -2,6 +2,7 @@ const fs = require('fs')
 const removeDuplicates = () => {
     const data = JSON.parse(fs.readFileSync('./public/db.json', 'utf-8'))
     const uniqueData = getUniqueListBy(data, 'animeEnglish')
+    uniqueData.sort((a, b) => a.animeEnglish - b.animeEnglish)
     fs.writeFileSync('./public/db.json', JSON.stringify(uniqueData))
 }
 
