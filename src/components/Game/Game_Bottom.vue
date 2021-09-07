@@ -24,8 +24,10 @@
 <script>
 import Game_Song_Info from '@/components/Game/Game_Song_Info'
 import { mapActions, mapGetters } from 'vuex'
+import helpers from '@/mixins/helpers'
 
 export default {
+    mixins: [helpers],
     components: {
         Game_Song_Info,
     },
@@ -36,6 +38,7 @@ export default {
         songNumber(value) {
             if (value > this.totalSongs) {
                 this.$router.push('/')
+                this.RefreshPage()
             }
         },
         phase(value) {
