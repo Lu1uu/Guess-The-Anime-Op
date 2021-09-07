@@ -13,5 +13,10 @@ export default {
             // The reason we have setTimeout here is because it'll run after all sync actions have finished
             setTimeout(() => (this.refreshComponent = false), 0)
         },
+        async RefreshPage() {
+            setTimeout(() => {
+                location.reload()
+            })
+        },
     },
 }

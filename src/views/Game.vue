@@ -1,7 +1,7 @@
 <template>
     <div class="container" v-if="!isGameOver">
         <router-link to="/">
-            <button class="btn btn-primary btn-lg home-btn">Home</button>
+            <button @click="RefreshPage" class="btn btn-primary btn-lg home-btn">Home</button>
         </router-link>
         <Game_Videoplayer />
         <Game_Guess v-if="phase == 'guessing'" />
@@ -15,8 +15,10 @@ import Game_Guess from '@/components/Game/Game_Guess'
 import Game_Bottom from '@/components/Game/Game_Bottom'
 
 import { mapActions, mapGetters } from 'vuex'
+import helpers from '@/mixins/helpers.js'
 
 export default {
+    mixins: [helpers],
     components: {
         Game_Videoplayer,
         Game_Guess,

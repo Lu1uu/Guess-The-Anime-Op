@@ -2,6 +2,7 @@ import party from 'party-js'
 export default {
     namespaced: true,
     state: {
+        db: '',
         playList: [],
         playListSize: 10,
         currentSong: 1,
@@ -44,8 +45,12 @@ export default {
         },
     },
     actions: {
+        updateDB(context, name) {
+            context.state.db = name
+            console.log(context.state.db)
+        },
         async PopulateDatabase(context) {
-            const res = await fetch('./db.json')
+            const res = await fetch(context.state.db)
             const data = await res.json()
             context.commit('PopulateDatabase', data)
         },

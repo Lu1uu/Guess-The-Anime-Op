@@ -1,6 +1,6 @@
 const fs = require('fs')
 const removeDuplicates = () => {
-    const data = JSON.parse(fs.readFileSync('./public/db.json', 'utf-8'))
+    const data = JSON.parse(fs.readFileSync('../public/db.json', 'utf-8'))
     const uniqueData = getUniqueListBy(data, 'animeEnglish', 'type')
     const sortedData = getSortedData(uniqueData, 'animeEnglish', true)
     const trimmedData = sortedData.map((anime) => {
@@ -15,7 +15,7 @@ const removeDuplicates = () => {
             difficulty: anime?.difficulty,
         }
     })
-    fs.writeFileSync('./public/db.json', JSON.stringify(trimmedData))
+    fs.writeFileSync('../public/db.json', JSON.stringify(trimmedData))
 }
 
 function getSortedData(data, prop, isAsc) {

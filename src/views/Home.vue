@@ -10,8 +10,26 @@
                 </p>
                 <div class="mb-5">
                     <router-link to="/game">
-                        <button type="button" class="btn btn-primary btn-lg px-5 py-3 me-sm-3">
-                            Play Game
+                        <button
+                            @click="updateDB('./dbEasy.json')"
+                            type="button"
+                            class="btn btn-primary btn-lg px-5 py-3 me-sm-3"
+                        >
+                            Easy
+                        </button>
+                        <button
+                            @click="updateDB('./dbMed.json')"
+                            type="button"
+                            class="btn btn-primary btn-lg px-5 py-3 me-sm-3"
+                        >
+                            Medium
+                        </button>
+                        <button
+                            @click="updateDB('./db.json')"
+                            type="button"
+                            class="btn btn-primary btn-lg px-5 py-3 me-sm-3"
+                        >
+                            Mixed
                         </button>
                     </router-link>
                 </div>
@@ -30,3 +48,12 @@
         </div>
     </div>
 </template>
+
+<script>
+import { mapActions } from 'vuex'
+export default {
+    methods: {
+        ...mapActions('game', ['updateDB']),
+    },
+}
+</script>
