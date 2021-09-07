@@ -1,5 +1,8 @@
 <template>
     <div class="container" v-if="!isGameOver">
+        <router-link to="/">
+            <button class="btn btn-primary btn-lg home-btn">Home</button>
+        </router-link>
         <Game_Videoplayer />
         <Game_Guess v-if="phase == 'guessing'" />
         <Game_Bottom />
@@ -38,6 +41,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.home-btn {
+    position: absolute;
+    top: 6rem;
+    left: 6rem;
+}
 .container {
     width: 100%;
     max-width: 60rem;
