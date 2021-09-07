@@ -1,5 +1,5 @@
-# guess-anime-song
-
+# Guess the anime opening!
+<img src='https://files.catbox.moe/ack9p7.png'/>
 ## Project setup
 ```
 npm install
