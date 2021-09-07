@@ -16,14 +16,13 @@
                     </router-link>
                 </div>
             </div>
-            <div class="overflow-hidden" style="max-height: 50vh">
+            <div class="overflow-hidden" style="max-height: 60vh">
                 <div class="container px-5">
                     <img
                         src="https://files.catbox.moe/ack9p7.png"
                         class="img-fluid border rounded-3 shadow-lg mb-4"
                         alt="Example image"
                         width="700"
-                        height="500"
                         loading="lazy"
                     />
                 </div>
