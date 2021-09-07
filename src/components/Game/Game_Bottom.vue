@@ -33,6 +33,11 @@ export default {
         return {}
     },
     watch: {
+        songNumber(value) {
+            if (value > this.totalSongs) {
+                this.$router.push('/')
+            }
+        },
         phase(value) {
             if (value == 'guessing') {
                 this.updateCurrentFace('neutral')
